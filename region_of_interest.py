@@ -22,3 +22,6 @@ class region_of_interest():
         c1 = self.coords[0]
         c2 = self.coords[1]
         return frame[min(c1[1],c2[1]):max(c1[1],c2[1]), min(c1[0],c2[0]):max(c1[0],c2[0])]
+    
+    def get_raw_roi(self):
+        return self.coords
