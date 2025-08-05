@@ -29,7 +29,7 @@ class my_id_tool():
             self.define_regions()
         extracted_text = self.extract_text_with_easyocr()
         self.mcard = card(extracted_text)    
-        cv2.imwrite(f'SWDump/{self.mcard.file_name}.png', self.img) # type: ignore
+        #cv2.imwrite(f'SWDump/{self.mcard.file_name}.png', self.img) # type: ignore
             
         return self.mcard
     
@@ -72,7 +72,7 @@ class my_id_tool():
                 if len(self.regions) <= 0:
                     exit()
                 cv2.destroyWindow("grayscale")
-                return()
+                return self.regions
             for r in self.regions:
                 if r.has_no_value():
                     continue

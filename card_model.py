@@ -14,14 +14,16 @@ class card():
         if size==0:
             return
         if size>=1:
-            self.name=args[0]
+            self.name=str(args[0]).lower()
             self.file_name=self.__get_file_name__()
         if size>=2:
-            self.play_set=args[1]
+            self.play_set=str(args[1]).upper()
         if size>=3:
+            self.is_foil=False
             if '/' in args[2]:
-                self.is_foil=False
                 self.number=args[2].split('/')[0]
+            elif '7' in args[2] and len(args[2]) > 4:
+                self.number=args[2][:4]
             else:
                 self.is_foil=True
                 self.number=args[2]
