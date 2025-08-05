@@ -208,3 +208,6 @@ __marimo__/
 __pycache__
 .vs/
 __pycache__/
+SWDump/
+output.csv
+cards.json
